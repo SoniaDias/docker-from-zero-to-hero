@@ -1,0 +1,10 @@
+1. one service per container
+2. build context should be small, can use dockerignore
+3. install only the things you need
+4. less layers, try to optimize your commands, if you can run everything in a comand, do not write several commands
+    RUN \
+        option1 && \
+        option2 && \
+        option3
+
+    and also use environment variables for things you repeat a lot
