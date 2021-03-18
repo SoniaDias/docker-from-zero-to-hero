@@ -1,0 +1,28 @@
+version: '3'
+services:
+  drupal:
+    volumes:
+    #docker volume
+      - drupal:/var/www/html
+    image: drupal:8-apache
+    ports:
+      - "821:80"
+    networks:
+      - net
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+    #bind volume
+      - C:\docker\postgres_volume:/var/lib/postgresql/data
+    networks:
+      - net
+volumes:
+  drupal:
+networks:
+  net:
+
+
+#docker-compose -f docker-compose-drupal.yml up -d 
+# postgres host on installing drupal, the name of postgres service, since they share same network

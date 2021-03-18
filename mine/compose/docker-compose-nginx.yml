@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  web: 
+    image: nginx:alpine
+    container_name: nginx_ohyeahhh
+    networks: 
+      - test_net
+  db: 
+    image: mysql:5.7
+    container_name: mysql_ohyeahhhh
+    networks: 
+      - test_net
+networks: 
+  test_net:
+
+
+
+#docker-compose -f docker-compose-networks.yml up -d      
+#docker-compose -f docker-compose-networks.yml down 
+
+#docker exec -it mysql_ohyeahhhh bash 
+#env | grep MYSQL

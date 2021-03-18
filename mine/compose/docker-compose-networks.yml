@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web: 
+    container_name: centos_ohyeahhhh
+    image: centos
+    networks: 
+      - test_net
+    tty: true
+  db: 
+    image: centos
+    container_name: centos_yeahhhhoh
+    env_file: env-file.txt
+    networks: 
+      - test_net
+    tty: true
+networks: 
+    test_net:
+
+#to keep container alive
+#tty: true
+
+#docker-compose -f docker-compose-networks.yml up -d      
+#docker-compose -f docker-compose-networks.yml down 
+
+#deve ser usado o nome do serviço, não o nome do container
+#docker exec -ti centos_yeahhhhoh bash -c "ping centos_ohyeahhhh"
+#docker exec -ti centos_yeahhhhoh bash -c "ping web"

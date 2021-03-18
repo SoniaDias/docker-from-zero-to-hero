@@ -1,0 +1,27 @@
+version: '3'
+
+services: 
+  db: 
+    image: mysql:5.7
+    container_name: mysql_ohyeahhhh
+    ports: 
+      - "811:3306"
+    #environment vars can be passed directly or through a env.file
+    #extensions and name of file does not metters  
+    env_file: env-file.txt
+    #environment: 
+    #  - MYSQL_ROOT_PASSWORD=123
+    #  - SHOW=true
+    volumes: #bind volumes
+      - C:\docker\mysql_volume:/var/lib/mysql
+#to use a docker volume
+    #volumes: my_volume::/var/lib/mysql
+#volumes:
+  #my_volume:
+
+
+#docker-compose -f docker-compose-mysql.yml up -d      
+#docker-compose -f docker-compose-mysql.yml down 
+
+#docker exec -it mysql_ohyeahhhh bash 
+#env | grep MYSQL

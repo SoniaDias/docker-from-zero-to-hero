@@ -1,0 +1,12 @@
+version: '3' 
+
+services:
+  whatever: 
+    image: centos
+    container_name: whatever_centos
+    command: python -m SimpleHTTPServer
+
+
+
+
+#docker-compose -f docker-compose-cmd.yml up -d  

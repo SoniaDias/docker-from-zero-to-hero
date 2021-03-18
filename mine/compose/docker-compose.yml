@@ -1,0 +1,14 @@
+version: '3' 
+
+services:
+  web: 
+    container_name: nginx_compose
+    ports: 
+      - "811:80" 
+    image: nginx:alpine
+#OPTIONALS
+#volumes: 
+#networks:
+
+#docker-compose up -d
+#docker-compose down 

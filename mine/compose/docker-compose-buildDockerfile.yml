@@ -1,0 +1,13 @@
+version: '3' 
+
+services:
+  web: 
+    image: my_test_image
+    container_name: test_cont
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+
+#docker-compose build
+#docker-compose -f docker-compose-buildDockerfile.yml up -d 
